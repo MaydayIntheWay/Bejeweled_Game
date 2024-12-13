@@ -60,5 +60,7 @@ $ ssh -T git@github.com
 ### 6.接着到了这次要使用的开发工具 QT creator
 可参考这篇文章：
 https://blog.csdn.net/qq_49635014/article/details/132291529
+
 **但现在GitHub的默认分支改名为main而不是master 所以文章中涉及的master的命令要改为main**
+
 **如无法提交到GitHub的远程仓库可尝试关掉加速器:(**
