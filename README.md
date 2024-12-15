@@ -1,6 +1,9 @@
 # 把我找到的教程复制黏贴在这里了 大家可以看看
 ## 万一有什么问题还是得gpt和csdn 俺也不懂TT
 
+### 更新一个找的GitHub教程
+https://blog.csdn.net/weixin_52122271/article/details/135858483
+
 ### 0.多人协作大致流程
 项目经理（PM）在本地创建项目主体架构，并提交到本地git仓库；再将项目推送（push）到远程仓库（github、gitee）上
 
