@@ -1,0 +1,15 @@
+debug/help.o
+debug/ingame.o
+debug/login.o
+debug/main.o
+debug/record.o
+debug/rigist.o
+debug/widget.o
+debug/qrc_background.o
+debug/qrc_botton.o
+debug/moc_help.o
+debug/moc_ingame.o
+debug/moc_login.o
+debug/moc_record.o
+debug/moc_rigist.o
+debug/moc_widget.o

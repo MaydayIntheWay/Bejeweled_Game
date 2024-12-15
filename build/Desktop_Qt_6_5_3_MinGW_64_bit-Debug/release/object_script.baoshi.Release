@@ -1,0 +1,15 @@
+release/help.o
+release/ingame.o
+release/login.o
+release/main.o
+release/record.o
+release/rigist.o
+release/widget.o
+release/qrc_background.o
+release/qrc_botton.o
+release/moc_help.o
+release/moc_ingame.o
+release/moc_login.o
+release/moc_record.o
+release/moc_rigist.o
+release/moc_widget.o
