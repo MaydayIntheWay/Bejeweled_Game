@@ -16,7 +16,9 @@ public:
     ~Rigist();
 void paintEvent(QPaintEvent * event);
 private slots:
-    void on_loginBotton_clicked();
+    void on_ensureBotton_clicked();
+
+    void on_backHome2_clicked();
 
 private:
     Ui::Rigist *ui;

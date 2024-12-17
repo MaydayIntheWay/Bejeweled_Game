@@ -26,6 +26,7 @@ void Record::on_backHome2_clicked()
 {
     Widget *wid =new Widget();
     wid->show();
+
     this->close();
 }
 

@@ -1,8 +1,9 @@
 #include "rigist.h"
 #include "qpainter.h"
 #include "ui_rigist.h"
+#include"users.h"
 #include <login.h>
-
+#include <widget.h>
 Rigist::Rigist(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Rigist)
@@ -23,12 +24,24 @@ void Rigist::paintEvent(QPaintEvent *event)
     painter.drawPixmap(0,0,width(),height(),QPixmap(":/background.png"));
 }
 
-void Rigist::on_loginBotton_clicked()
+//在这里写代码
+//1.需要判断该账号是否存在，若存在则报错
+//2.需要获取（rigist.ui）passwordAdd和passwordEnsureAdd_2两个文本框的内容是否相等，若不相等则报错
+//3.若1,2步未出错则注册成功，返回登录页面
+void Rigist::on_ensureBotton_clicked()
 {
-    if(1/*注册的时候没有异常情况比如账号重复*/){
+    if(1/*这里的条件是判断是否注册成功*/){
         Login *pic =new Login();
         pic->show();
         this->close();
     }
+}
+
+
+void Rigist::on_backHome2_clicked()
+{
+    Widget *wid = new Widget();
+    wid->show();
+    this->close();
 }
 

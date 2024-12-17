@@ -9,20 +9,27 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    gem.cpp \
     help.cpp \
+    hoverbutton.cpp \
     ingame.cpp \
     login.cpp \
     main.cpp \
     record.cpp \
     rigist.cpp \
+    userManager.cpp \
     widget.cpp
 
 HEADERS += \
+    gem.h \
     help.h \
+    hoverbutton.h \
     ingame.h \
     login.h \
     record.h \
     rigist.h \
+    userManager.h \
+    users.h \
     widget.h
 
 FORMS += \
