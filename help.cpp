@@ -19,7 +19,7 @@ Help::~Help()
 void Help::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
-    painter.drawPixmap(0,0,width(),height(),QPixmap(":/InGame/background3.jpg"));
+    painter.drawPixmap(0,0,width(),height(),QPixmap("/InGame/background3.jpg"));
 }
 
 void Help::on_backHome2_clicked()

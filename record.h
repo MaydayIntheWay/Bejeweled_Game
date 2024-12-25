@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QPainter>
+#include <users.h>
 namespace Ui {
 class Record;
 }
@@ -12,7 +13,8 @@ class Record : public QWidget
     Q_OBJECT
 
 public:
-    explicit Record(QWidget *parent = nullptr);
+    users *user;
+    explicit Record(QWidget *parent,users *userTmp);
     ~Record();
     void paintEvent(QPaintEvent * event);
 

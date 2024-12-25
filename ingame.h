@@ -46,16 +46,19 @@ class Ingame : public QWidget
     Q_OBJECT
 
 public:
+    //用户信息
+    users *user;
+
     // 构造函数，接受一个父窗口作为参数
-    explicit Ingame(QWidget *parent = nullptr);
+    explicit Ingame(QWidget *parent,users *userTmp);
     ~Ingame();
 
     void paintEvent(QPaintEvent * event);
 
     void setupScene();
 
-    // 游戏的声音效果
-     //QSoundEffect* sound;
+    //游戏的声音效果
+    //QSoundEffect* sound;
 
 private:
      //设置参数，可更改
@@ -112,70 +115,78 @@ private:
     int randomGem();
 
     // 播放音效
-     void playSound(int type);
+    //void playSound(int type);
 
     // 启动游戏
     void startGame();
 
     //延时函数
-   void Sleep(int msec);
+    void Sleep(int msec);
 
-//禁用或启用所有宝石的鼠标事件，常用于暂停或禁用玩家交互的场景。
-   void forbidAll(bool forbid);
+    //禁用或启用所有宝石的鼠标事件，常用于暂停或禁用玩家交互的场景。
+    void forbidAll(bool forbid);
 
     // 执行宝石掉落
-        void fall();
+    void fall();
 
-       // 填充新的宝石
-        void fill();
+    // 填充新的宝石
+    void fill();
 
-      // 停止宝石旋转动画
-          void makeStopSpin(int, int);
+    // 停止宝石旋转动画
+    void makeStopSpin(int, int);
 
-        // 启动宝石旋转动画
-          void makeSpin(int, int);
+    // 启动宝石旋转动画
+    void makeSpin(int, int);
 
-       // 交换两个宝石的位置
-         void swap(int, int, int gemX, int gemY);
+    // 交换两个宝石的位置
+    void swap(int, int, int gemX, int gemY);
 
-        // 消除宝石
+    // 消除宝石
     void eliminateBoard();
 
 
-       // 检测提示位置
-       Point tipsdetect();
+    // 检测提示位置
+    Point tipsdetect();
 
-       // 完全消除所有宝石
-       void allFallOut();
-
-
-   // 执行宝石动作
-   void act(Gem* gem);
-
-   int selectedX = -1, selectedY = -1;  // 选择的宝石坐标
+    // 完全消除所有宝石
+    void allFallOut();
 
 
-   // 重置游戏棋盘
-   void reSetBoard();
+    // 执行宝石动作
+    void act(Gem* gem);
 
-   // 执行宝石掉落动画
-      void fallAnimation(Gem *gem, int h);
+    int selectedX = -1, selectedY = -1;  // 选择的宝石坐标
 
-      // 填充宝石的掉落动画
-      void fillfallAnimation(Gem *gem, int h);
+
+    // 重置游戏棋盘
+    void reSetBoard();
+
+    // 执行宝石掉落动画
+    void fallAnimation(Gem *gem, int h);
+
+    // 填充宝石的掉落动画
+    void fillfallAnimation(Gem *gem, int h);
 
     Ui::Ingame *ui;// 游戏UI对象
 
+
 signals:
-   // 信号：消除完成
+    // 信号：消除完成
     void eliminateFinished();
 
     // 信号：鼠标移动事件
     //void myMouseMove(QMouseEvent*);
 
     // 信号：计时完成
-   // void finishCount();
+    // void finishCount();
 
+    // 返回主页
+    void backHome();
+
+    // 重置棋盘
+    void resetBoard();
+
+public slots:
     //返回主页
     void on_backHome_clicked();
 
@@ -183,6 +194,7 @@ signals:
     void on_reset_clicked();
 
 };
+
 
 
 #endif // INGAME_H

@@ -21,13 +21,13 @@ public:
     int x, y;  // 宝石的坐标位置
     void setY(int num){y=num;}
 
-    int oriX,oriY;
+    int oriX,oriY;  //实际图片位置
     explicit Gem(int type, int len, int x, int y, QWidget *parent = nullptr, int offset=0);// 构造函数
     void bomb();// 宝石爆炸（销毁）的方法
-    QMovie* spinGif;  // 动画效果指针（用于旋转动画）
-    QLabel* spinLabel; // 显示旋转动画的标签
-    QMovie* magicGif;  // 魔法效果的动画指针
-    QLabel* magicLabel; // 显示魔法动画的标签
+    //QMovie* spinGif;  // 动画效果指针（用于旋转动画）
+    //QLabel* spinLabel; // 显示旋转动画的标签
+    //QMovie* magicGif;  // 魔法效果的动画指针
+    //QLabel* magicLabel; // 显示魔法动画的标签
     QLabel* normalLabel; // 显示常规静态图片的标签
 
 private:

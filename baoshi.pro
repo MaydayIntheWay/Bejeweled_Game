@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += core sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,7 +19,8 @@ SOURCES += \
     record.cpp \
     rigist.cpp \
     userManager.cpp \
-    widget.cpp
+    widget.cpp \
+    users.cpp
 
 HEADERS += \
     gem.h \
@@ -48,3 +50,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     background.qrc \
     botton.qrc
+

@@ -55,7 +55,7 @@
     <string>请确认密码</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="loginBotton">
+  <widget class="QPushButton" name="ensureBotton">
    <property name="geometry">
     <rect>
      <x>580</x>

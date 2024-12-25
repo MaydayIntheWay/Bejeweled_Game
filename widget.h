@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QPainter>
+#include <users.h>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class Widget;
@@ -14,7 +15,9 @@ class Widget : public QWidget
     Q_OBJECT
 
 public:
+    users *user;
     Widget(QWidget *parent = nullptr);
+    Widget(QWidget *parent,users *userTmp);
     ~Widget();
     void paintEvent(QPaintEvent * event);
 

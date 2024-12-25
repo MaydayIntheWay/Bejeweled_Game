@@ -1,17 +1,18 @@
 #include "ingame.h"
 #include "qpainter.h"
 #include "ui_ingame.h"
-#include<widget.h>
+#include <widget.h>
 
-#include "usermanager.h"
+#include "users.h"
 
-Ingame::Ingame(QWidget *parent)
+Ingame::Ingame(QWidget *parent,users *userTmp)
     : QWidget(parent)
     , ui(new Ui::Ingame)
 {
     ui->setupUi(this);
     this->setMinimumSize(QSize(1140, 800));
     this->setMaximumSize(QSize(1140, 800));
+    user = userTmp;
 }
 
 //这个函数将初始化游戏整体场景
@@ -63,9 +64,9 @@ int Ingame::randomGem(){
 }
 
 //这个函数用于根据不同的操作播放音效（例如交换，消除）
-void Ingame::playSound(int type){
+// void Ingame::playSound(int type){
 
-}
+// }
 //这个函数用于开始游戏和完成游戏逻辑
 void Ingame::startGame(){
     //需要随机生成宝石
@@ -184,7 +185,7 @@ void Ingame::paintEvent(QPaintEvent *event)
 
 void Ingame::on_backHome_clicked()
 {
-    Widget *wid =new Widget();
+    Widget *wid =new Widget(nullptr,user);
     wid->show();
     this->close();
 
@@ -197,14 +198,14 @@ void Ingame::on_reset_clicked()
 }
 
 
-void Ingame::on_pause_clicked()
-{
-//暂停
-}
+    //void Ingame::on_pause_clicked()
+    //{
+    //暂停
+    //}
 
 
-void Ingame::on_unpause_clicked()
-{
-//恢复
-}
+    //void Ingame::on_unpause_clicked()
+    //{
+    //恢复
+    //}
 

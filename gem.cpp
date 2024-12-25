@@ -1,5 +1,5 @@
 #include "gem.h"
-Gem::Gem(int type, int len, int x, int y, QWidget *parent, int offset) : QPushButton(parent), type(type), x(x), y(y)
+Gem::Gem(int type,int len, int x, int y, QWidget *parent, int offset) : QPushButton(parent), type(type), x(x), y(y)
 {
     initialPath();// 初始化静态和动态的路径
 
